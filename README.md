@@ -22,46 +22,6 @@ A simple and efficient **Task Manager** application built with **React, Redux, a
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB (via Mongoose)
 
----
-
-## 📦 Installation
-
-### Clone the repository
-```sh
- git clone https://github.com/your-username/task-manager.git
- cd task-manager
-```
-
-### Install dependencies
-```sh
-npm install
-```
-
-### Start the application
-```sh
-npm start
-```
-
-The app will be available at **http://localhost:3000** 🚀
-
----
-
-## 🔧 API Routes (Example)
-
-| Method | Endpoint          | Description                  |
-|--------|------------------|------------------------------|
-| GET    | `/tasks`         | Fetch all tasks              |
-| POST   | `/tasks`         | Create a new task            |
-| PUT    | `/tasks/:id`     | Update a task by ID          |
-| DELETE | `/tasks/:id`     | Delete a task by ID          |
-
----
-
-## 🎨 UI Preview
-
-![Task Manager UI](https://via.placeholder.com/800x400?text=Task+Manager+App+Preview)
-
----
 
 ## 👨‍💻 Contributing
 
