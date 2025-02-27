@@ -119,11 +119,6 @@ function Tasks() {
           <Button variant='contained' fullWidth onClick={handleSearch} disabled={loading}>
             Search
           </Button>
-          <FormControlLabel
-            control={<Switch checked={showCompleted} onChange={handleFilter} />}
-            label='Show Completed'
-            sx={{ mt: 2 }}
-          />
         </Grid>
       </Grid>
       {error && <Typography color='error' sx={{ mb: 2 }}>{error}</Typography>}

@@ -1,34 +1,46 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-export const login = createAsyncThunk('auth/login', async ({ email, password }, { rejectWithValue }) => {
-  try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
-    });
-    if (!response.ok) throw new Error((await response.json()).message);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    return rejectWithValue(error.message);
+export const login = createAsyncThunk(
+  'auth/login',
+  async ({ email, password }, { rejectWithValue }) => {
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/auth/login`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password }),
+        }
+      );
+      if (!response.ok) throw new Error((await response.json()).message);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
   }
-});
+);
 
-export const register = createAsyncThunk('auth/register', async ({ name, email, password }, { rejectWithValue }) => {
-  try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/register`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, password }),
-    });
-    if (!response.ok) throw new Error((await response.json()).message);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    return rejectWithValue(error.message);
+export const register = createAsyncThunk(
+  'auth/register',
+  async ({ name, email, password }, { rejectWithValue }) => {
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/auth/register`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, password }),
+        }
+      );
+      if (!response.ok) throw new Error((await response.json()).message);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
   }
-});
+);
 
 const authSlice = createSlice({
   name: 'auth',
